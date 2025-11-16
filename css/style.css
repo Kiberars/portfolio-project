@@ -1,0 +1,57 @@
+*{ /*сбросстилей*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+:root{  
+    --primary-color: #8B5FBF;      /* Приорететный */
+    --accent-purple: #A855F7;      /* Акцент фиолетовый*/
+    --accent-pink: #EC4899;        /* Акцент розовый */
+    --accent-blue: #06B6D4;        /* Акцент голубой */
+    --text-dark: #1E1B2E;          /* Ттемный текст */
+    --text-light: #6D6B7D;         /* светлый текст*/
+    --bg-light: #F8F7FC;           /* светлый фон */
+    --bg-dark: #161616;           /* темный фон */
+    --white: #FFFFFF;               /* белый фон */
+    --shadow: 0 4px 6px -1px rgba(139, 95, 191, 0.15); /* Тень  */
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+#nav-bar{
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FIO {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.nav-link {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-link a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+.nav-link a:hover {
+    color: var(--primary-color);
+}
