@@ -15,12 +15,14 @@
     --white: #FFFFFF;               /* белый фон */
     --shadow: 0 4px 6px -1px rgba(139, 95, 191, 0.3); /* Тень  */
 }
+/* ОСНОВА */
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     color: var(--text-dark);
     background-color: var(--bg-light);
 }
+/* НАВИГАЦИЯ */
 #nav-bar{
     background: var(--white);
     box-shadow: var(--shadow);
@@ -55,6 +57,7 @@ body{
 .nav-link a:hover {
     color: var(--primary-color);
 }
+/* ОБОМНЕ */
 .hero {
     max-width: 1200px;
     margin: 0 auto;
@@ -75,7 +78,7 @@ body{
 .subtitle {
     font-size: 1.5rem;
     color: var(--text-light);
-    margin-bottom: 0.5 rem;
+    margin-bottom: 0.5rem;
 }
 .description {
     font-size: 1.2rem;
@@ -129,36 +132,122 @@ body{
     align-items: center;
     font-size: 4rem;
 }
+/* МОЙ ПУТЬ */
+.lerning-section {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--text-dark);
+}
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background: linear-gradient(to bottom, var(--accent-purple), var(--accent-blue));
+    transform: translateX(-50%);
+}
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+    position: relative;
+}
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.timeline-date {
+    flex: 0 0 200px;
+    text-align: center;
+    padding: 0 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;    
+}
+.timeline-content {
+    flex: 0 0 400px;
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+.timeline-content h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+.timeline-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
 
 
 
 
 
 
-
+/* АДАПТИВ */
 @media (max-width: 768px) {
+    /* ОБО МНЕ */
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
         padding: 6rem 1rem 2rem;
         margin-top: 60px;
-    }
-    
+    }    
     .hero h1 {
         font-size: 2.5rem;
-    }
-    
+    }    
     .cta-buttons {
         flex-direction: column;
         align-items: center;
-    }
-    
+    }    
     .btn {
         width: 200px;
         text-align: center;
-    }
-    
+    }    
     .nav-link {
         display: none; 
+    }
+    /* МОЙ ПУТЬ */
+
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-item {
+        flex-direction: row !important;
+        justify-content: flex-start;
+        margin-left: 40px;
+    }
+    .timeline-date {
+        flex: 0 0 100px;
+        justify-content: flex-start;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+    .timeline-content {
+        flex: 1;
+        margin-left: 1rem;
     }
 }
