@@ -165,7 +165,7 @@ body{
 .timeline-item {
     display: flex;
     justify-content: center;
-    margin-bottom: 4%;
+    margin-bottom: 4rem;
     position: relative;
 }
 .timeline-item:nth-child(odd) {
