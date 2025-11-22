@@ -718,7 +718,7 @@ body {
     height: 50px;
 }
 .theme-toggle:hover {
-    background: var(--bg-light);
+    background: var(--text-dark);
     transform: scale(1.1);
 }
 
@@ -729,3 +729,25 @@ body {
         padding: 0.3rem;
     }
 }
+
+
+.scroll-to-top {
+  color: var(--accent-blue);
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none; /* Скрыта изначально */
+  /* Другие стили: цвет, размер и т.д. */
+  
+}
+.scroll-to-top img{
+  width: 50px;
+  transition: all 0.3s;
+}
+.scroll-to-top img:hover{
+  transform: scale(1.2);
+}
+.scroll-to-top.active {
+  display: block; /* Отображается при активации */
+}
+

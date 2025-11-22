@@ -23,14 +23,15 @@ const root = document.documentElement;
 const imgThem = document.getElementById('imgThem');
 const imglinkTg = document.getElementById('linkTg');
 const imglinkgithub = document.getElementById('linkGithub');
+const ScrolUp = document.getElementById('ScrolUp');
 
 function themLight(){
         root.style.setProperty('--primary-color', '#8b5fbf');
         root.style.setProperty('--accent-purple', '#a855f7');
         root.style.setProperty('--accent-pink', '#ec4899');
         root.style.setProperty('--accent-blue', '#06b6d4');
-        root.style.setProperty('--text-dark', '#1e1b2e;');
-        root.style.setProperty('--text-light', '#6d6b7d');
+        root.style.setProperty('--text-dark', '#1e1b2e');
+        root.style.setProperty('--text-light', '#3E3D47FF');
         root.style.setProperty('--bg-light', '#f8f7fc');
         root.style.setProperty('--bg-dark', '#161616');
         root.style.setProperty('--white', '#ffffff');
@@ -39,6 +40,7 @@ function themLight(){
         imgThem.src = 'img/darkThem.png'
         imglinkTg.src = 'img/tg-link.png'
         imglinkgithub.src = 'img/github-link.png'
+        ScrolUp.src = 'img/SlideUpDark.png'
         localStorage.setItem('them', 'Light');
         console.log(localStorage.getItem('them'));
 }
@@ -58,6 +60,7 @@ function themDark(){
         imgThem.src = 'img/lightThem.png'
         imglinkTg.src = 'img/tg-link-dark.png'
         imglinkgithub.src = 'img/github-link-dark.png'
+        ScrolUp.src = 'img/SlideUpLight.png'
         localStorage.setItem('them', 'Dark');
         console.log(localStorage.getItem('them'));
 }
@@ -98,3 +101,13 @@ function DarkLightThem(){
     }
 }
 
+
+
+window.addEventListener('scroll', function() {
+  var button = document.querySelector('.scroll-to-top');
+  if (window.scrollY > 300) { /* Показывать после 300px прокрутки */
+    button.classList.add('active');
+  } else {
+    button.classList.remove('active');
+  }
+});
