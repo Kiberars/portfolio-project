@@ -23,7 +23,11 @@
     <!-- НАВИГАЦИЯ -->
     <nav id="nav-bar">
       <section class="nav-container">
-        <div class="FIO">Арсений Трифонов</div>
+        <div class="FIO-them">
+          <div class="FIO">Арсений Трифонов</div>
+          <button class="theme-toggle" onclick="DarkLightThem()"><img src="img/darkThem.png" alt="them" id="imgThem"/></button>
+        </div>
+
         <button class="burger">
           <span></span>
         </button>
@@ -50,6 +54,7 @@
              
       </section>
     </nav>
+    
  
       
 
@@ -67,10 +72,10 @@
         </div>
       </div>
       <div class="hero-image">
-        <img class="avatar-placeholder" src="img/face1.png" alt="Image" />
+        <img  class="avatar-placeholder" src="img/face1.png" alt="Image"/>
         <div class="link-icons">
-          <a href="https://t.me/TrifonovArs" ><img  src="img/tg-link.png" alt="Telegram" class="link-icons-img" ></a>
-          <a href="https://github.com/Kiberars" ><img  src="img/github-link.png" alt="Github" class="link-icons-img"></a>
+          <a href="https://t.me/TrifonovArs" ><img  src="img/tg-link.png" alt="Telegram" id="linkTg"></a>
+          <a href="https://github.com/Kiberars" ><img  src="img/github-link.png" alt="Github" id="linkGithub"></a>
         </div>
       </div>
     </section>
