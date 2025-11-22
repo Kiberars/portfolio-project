@@ -124,6 +124,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+    display: grid;
+  grid-template-rows: 1fr;
+
 }
 .avatar-placeholder {
   transition: all 0.5s;
@@ -138,7 +141,20 @@ body {
   font-size: 4rem;
 }
 .avatar-placeholder:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(139, 95, 191, 0.3);
+}
+
+.link-icons{
+  margin-top: 50px;
+  align-items: center;
+  
+}
+.link-icons-img{
+  width:50px;
+}
+.link-icons-img:hover{
+  transform: scale(1.1);
 }
 
 /* МОЙ ПУТЬ */
@@ -518,6 +534,9 @@ body {
     height: 300px;
     width: 300px;
   }
+  .avatar-placeholder:hover {
+  transform: scale(1);
+}
 }
 
 @media (max-width: 410px) {
