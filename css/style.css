@@ -609,36 +609,28 @@ body {
   top: 12px;
 }
 .nav-link{  
-  
+  top: 70px;
   position: fixed;  
-  top: -200px;
-  text-align: center;
-  right: 50px;
+  right: -200px;
+  text-align: left;  
   padding:20px;
-  background-color: var(--text-light);
+  background-color: var(--bg-light);
   z-index: -1;
   border-radius: 14px;
   border: #8b5fbf;
   box-shadow: var(--shadow);
-  border: 4px solid var(--bg-light);
+  border: 2px solid var(--primary-color);
   transition: all 0.3s;
   display: block;
   
 }
 .nav-link.active{
-  display: block;
-  position: fixed; 
-  top: 0px; 
-  right: 50px;
-  text-align: center;
+  top: 0px;
+  right: -110px;
   margin-top: 70px;
-  padding:20px;
-  background-color: var(--text-light);
-  z-index: -1;
-  border-radius: 14px;
-  border: #8b5fbf;
-  box-shadow: var(--shadow);
-  border: 4px solid var(--bg-light);
+  width: 210px;
+
+
 
 }
 .nav-link li{
