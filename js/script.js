@@ -20,35 +20,16 @@ document.addEventListener('click', (e) => {
 
 // Получаем корневой элемент (`:root` в CSS)
 const root = document.documentElement;
+const imgThem = document.getElementById('imgThem');
+const imglinkTg = document.getElementById('linkTg');
+const imglinkgithub = document.getElementById('linkGithub');
 
-// Задаем новое значение для переменной `--main-color`
-root.style.setProperty('--primary-color', '#8b5fbf');
-root.style.setProperty('--accent-purple', '#a855f7');
-root.style.setProperty('--accent-pink', '#ec4899');
-root.style.setProperty('--accent-blue', '#06b6d4');
-root.style.setProperty('--text-dark', '#1e1b2e;');
-root.style.setProperty('--text-light', '#6d6b7d');
-root.style.setProperty('--bg-light', '#f8f7fc');
-root.style.setProperty('--bg-dark', '#161616');
-root.style.setProperty('--white', '#ffffff');
-root.style.setProperty('--shadow', '0 4px 6px -1px rgba(139, 95, 191, 0.3)');
-
-
-
-function DarkLightThem(){
-    const root = document.documentElement;
-    const currentTheme = document.body.getAttribute('data-theme');
-    const imgThem = document.getElementById('imgThem');
-    const imglinkTg = document.getElementById('linkTg');
-    const imglinkgithub = document.getElementById('linkGithub');
-
-    if (currentTheme === 'dark') {
-        // Переключаем на СВЕТЛУЮ тему
+function themLight(){
         root.style.setProperty('--primary-color', '#8b5fbf');
         root.style.setProperty('--accent-purple', '#a855f7');
         root.style.setProperty('--accent-pink', '#ec4899');
         root.style.setProperty('--accent-blue', '#06b6d4');
-        root.style.setProperty('--text-dark', '#1e1b2e');
+        root.style.setProperty('--text-dark', '#1e1b2e;');
         root.style.setProperty('--text-light', '#6d6b7d');
         root.style.setProperty('--bg-light', '#f8f7fc');
         root.style.setProperty('--bg-dark', '#161616');
@@ -58,8 +39,11 @@ function DarkLightThem(){
         imgThem.src = 'img/darkThem.png'
         imglinkTg.src = 'img/tg-link.png'
         imglinkgithub.src = 'img/github-link.png'
-    } else {
-        // Переключаем на ТЕМНУЮ тему
+        localStorage.setItem('them', 'Light');
+        console.log(localStorage.getItem('them'));
+}
+
+function themDark(){
         root.style.setProperty('--primary-color', '#a78bfa');
         root.style.setProperty('--accent-purple', '#c084fc');
         root.style.setProperty('--accent-pink', '#f472b6');
@@ -74,6 +58,43 @@ function DarkLightThem(){
         imgThem.src = 'img/lightThem.png'
         imglinkTg.src = 'img/tg-link-dark.png'
         imglinkgithub.src = 'img/github-link-dark.png'
+        localStorage.setItem('them', 'Dark');
+        console.log(localStorage.getItem('them'));
+}
+
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+if(localStorage.getItem('them') === 'Dark'){ 
+    themDark();
+}else if(localStorage.getItem('them') === 'Light'){
+    themLight();
+}else{
+    if (prefersDarkScheme.matches) {
+    // Применить темную тему
+    //   console.log('Пользователь предпочитает темную тему');    
+    themDark();
+    } else {
+    // Применить светлую тему
+    //   console.log('Пользователь предпочитает светлую тему');
+    themLight();
+}
+}
+
+
+
+
+function DarkLightThem(){
+    
+    const currentTheme = document.body.getAttribute('data-theme');
+
+
+    if (currentTheme === 'dark') {
+        // Переключаем на СВЕТЛУЮ тему
+        themLight()
+
+    } else {
+        // Переключаем на ТЕМНУЮ тему
+        themDark()
     }
 }
 
