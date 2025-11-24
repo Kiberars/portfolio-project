@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio by Trifonov Arseny</title>
     <link rel="stylesheet" href="css/style.css" />
+    <meta property="og:title" content="Арсений Трифонов - Frontend Developer" />
     <meta name="description" content="Портфолио фронтенд-разработчика Арсения Трифонова. Создаю современные и удобные веб-интерфейсы." />
     <meta name="keywords" content="frontend, разработчик, портфолио, JavaScript, React, HTML, CSS" />
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
@@ -13,7 +14,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQLM5CB9WC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'G-BQLM5CB9WC');
@@ -21,14 +24,14 @@
   </head>
   <body>
     <!-- НАВИГАЦИЯ -->
-    <nav id="nav-bar">
+    <nav id="nav-bar" aria-label="Основная навигация">
       <section class="nav-container">
         <div class="FIO-them">
           <div class="FIO">Арсений Трифонов</div>
-          <button class="theme-toggle" onclick="DarkLightThem()"><img src="img/darkThem.png" alt="them" id="imgThem"/></button>
+          <button class="theme-toggle" onclick="DarkLightThem()"><img src="img/darkThem.png" alt="them" id="imgThem" /></button>
         </div>
 
-        <button class="burger">
+        <button class="burger" ria-label="Открыть меню" aria-expanded="false">
           <span></span>
         </button>
         <ul class="nav-link">
@@ -39,10 +42,7 @@
           <li><a href="#contact">Контакты</a></li>
         </ul>
 
-
-
-
-          <!-- <div class="burger"> 
+        <!-- <div class="burger"> 
             <modal class="menus" id="menus">
                 <a href="#home">Главная</a>
                 <a href="#lerning">Путь</a>
@@ -51,16 +51,11 @@
                 <a href="#contact">Контакты</a>
              </modal>           
           </div> -->
-             
       </section>
     </nav>
-    
- 
-      
-
 
     <!-- ОБОМНЕ -->
-    
+
     <section class="hero" id="home">
       <div class="hero-content">
         <h1>Привет, я <span class="highlight">Арсений Трифонов</span></h1>
@@ -73,16 +68,16 @@
         </div>
       </div>
       <div class="hero-image">
-        <img  class="avatar-placeholder" src="img/face1.png" alt="Image"/>
+        <img class="avatar-placeholder" src="img/face1.png" alt="Image" />
         <div class="link-icons">
-          <a href="https://t.me/TrifonovArs" ><img  src="img/tg-link.png" alt="Telegram" id="linkTg"></a>
-          <a href="https://github.com/Kiberars" ><img  src="img/github-link.png" alt="Github" id="linkGithub"></a>
+          <a href="https://t.me/TrifonovArs"><img src="img/tg-link.png" alt="Telegram" id="linkTg" /></a>
+          <a href="https://github.com/Kiberars"><img src="img/github-link.png" alt="Github" id="linkGithub" /></a>
         </div>
       </div>
     </section>
     <!-- Кнопка домой -->
     <a href="#top" class="scroll-to-top">
-      <img src="img/SlideUpDark.png" id="ScrolUp">
+      <img src="img/SlideUpDark.png" id="ScrolUp" />
     </a>
     <!-- ПУТЬ -->
     <section id="lerning" class="lerning-section">
